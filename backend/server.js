@@ -60,4 +60,11 @@ const startServer = async () => {
 };
 
 // Execute Bootstrap
-startServer();
+if (process.env.VERCEL) {
+    // Vercel Serverless environment
+    connectDB();
+} else {
+    startServer();
+}
+
+module.exports = app;
