@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { api } from '../context/AuthContext';
+import api from '../services/api';
 
 function Dashboard() {
     const [todos, setTodos] = useState([]);

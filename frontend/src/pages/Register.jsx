@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { api, AuthContext } from '../context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
+import api from '../services/api';
 
 function Register() {
     const [formData, setFormData] = useState({
