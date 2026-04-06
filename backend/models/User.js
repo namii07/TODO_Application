@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const { v4: uuidv4 } = require('uuid');
+const crypto = require('crypto');
 
 const userSchema = mongoose.Schema(
     {
         userId: {
             type: String,
-            default: uuidv4,
+            default: () => crypto.randomUUID(),
             unique: true,
             required: true,
         },
