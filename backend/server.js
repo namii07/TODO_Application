@@ -20,12 +20,7 @@ const app = express();
 app.use(express.json());
 
 // Enable CORS — allow React dev server connections safely
-app.use(
-    cors({
-        origin: ['http://localhost:5173', 'http://localhost:3000'],
-        credentials: true,
-    })
-);
+app.use(cors());
 
 // --- Mount Application Routes ---
 app.use('/', authRoutes);
